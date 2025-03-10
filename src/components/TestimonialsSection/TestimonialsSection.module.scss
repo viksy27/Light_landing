@@ -1,0 +1,57 @@
+@import "../../assets/styles/variables";
+
+.section {
+  margin-bottom: 80px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(170, 20, 240, 1) 400%
+  );
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    bottom: -3px;
+    right: -3px;
+    border-radius: 20px;
+    z-index: -1;
+    background-image: linear-gradient(
+      to bottom,
+      $lavender-light,
+      #c300c0,
+      #c90096,
+      #c10073,
+      #b22259,
+      #b3255a,
+      #b3285b,
+      #b42b5c,
+      #c51778,
+      #ce039b,
+      #cc15c5,
+      #b936f5
+    );
+    opacity: 0.2;
+  }
+
+  &_title {
+    margin-bottom: 30px;
+  }
+
+  &_desc {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-weight: 400;
+  }
+}
+
+.cards_wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}

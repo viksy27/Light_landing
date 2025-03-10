@@ -1,0 +1,256 @@
+@import "../../assets/styles/_variables";
+
+.hero_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 50px;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.hero_info {
+  max-width: 45%;
+
+  @media screen and (max-width: 768px) {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+h1 {
+  line-height: 4.3rem;
+  margin-bottom: 24px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 375px) {
+    margin-bottom: 30px;
+  }
+}
+
+.text {
+  max-width: 31.4rem;
+  margin-bottom: 24px;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto 15px auto;
+    max-width: 50rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    margin-bottom: 30px;
+  }
+}
+
+.btn_transparent {
+  padding: 10px 16px;
+  background-color: transparent;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  color: $white;
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin-left: 6px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+
+    &::before {
+      animation: shine 1s ease-out infinite;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      60deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.online {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 26rem;
+  margin-top: 40px;
+
+  &_icons {
+    display: flex;
+    position: relative;
+  }
+
+  &_icon:nth-child(2) {
+    position: absolute;
+    left: 26px;
+  }
+
+  &_icon:nth-child(3) {
+    position: absolute;
+    left: 56px;
+  }
+
+  &_icon:nth-child(4) {
+    position: absolute;
+    left: 84px;
+  }
+
+  &_text {
+    font-weight: 500;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      background-color: $white;
+      border-radius: 50%;
+      left: -14px;
+      top: 6px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 25px auto;
+  }
+
+  @media screen and (max-width: 375px) {
+    margin: 45px auto;
+    max-width: 100%;
+  }
+}
+
+.prewiev {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 63.2rem;
+
+  &_img {
+    position: relative;
+    z-index: 3;
+  }
+
+  &_picture {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &_stars {
+    position: absolute;
+    max-width: 15%;
+    width: 100%;
+    right: 0;
+
+    @media screen and (max-width: 768px) {
+      right: 15px;
+      top: 40px;
+    }
+  }
+
+  &_content {
+    width: 100%;
+    max-width: 74%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 30% 5% 10%;
+    background-color: #534686;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 30%;
+    transform: translate(-53%, 5%);
+    z-index: 2;
+
+    @media screen and (max-width: 992px) {
+      padding-bottom: 15%;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-bottom: 8%;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding-bottom: 12%;
+    }
+  }
+
+  &_title {
+    margin-bottom: 45px;
+    font-size: 2rem;
+    line-height: normal;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background-color: #fff;
+      left: 80px;
+      right: 80px;
+      bottom: -25px;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: 0;
+    }
+  }
+
+  &_text {
+    margin: 0 auto;
+    max-width: 20rem;
+    text-align: center;
+
+    @media screen and (max-width: 480px) {
+      max-width: 180px;
+      font-size: 1.2rem;
+      line-height: normal;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto 100px auto;
+  }
+}

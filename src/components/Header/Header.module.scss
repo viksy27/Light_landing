@@ -1,0 +1,75 @@
+@import "../../assets/styles/_variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 600px;
+    height: 600px;
+    top: -300px;
+    background: $bg-radial-gradient;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+  }
+}
+
+.logo {
+  font-family: "IM Fell Great Primer SC", serif;
+  font-size: 2.4rem;
+  color: $white;
+}
+
+.header_menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  & a {
+    color: $white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 10px;
+      border-radius: 3px;
+      background-color: $white;
+      bottom: -7px;
+      left: 50%-10;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    &:focus {
+      background: linear-gradient(
+        90deg,
+        rgba(200, 36, 236, 1) 0%,
+        rgba(223, 48, 141, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:focus::before {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.header_btn {
+  padding: 10px 24px;
+}

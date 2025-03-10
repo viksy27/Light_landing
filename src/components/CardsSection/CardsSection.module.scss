@@ -1,0 +1,52 @@
+@import "../../assets/styles/_variables";
+
+.cards {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  position: relative;
+
+  &_title {
+    margin-bottom: 25px;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1024px) {
+      justify-content: space-around;
+      gap: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      gap: 15px;
+    }
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @media screen and (max-width: 375px) {
+      gap: 30px;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 700px;
+    height: 700px;
+    background: $bg-radial-gradient;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+    left: -550px;
+    bottom: -250px;
+  }
+}

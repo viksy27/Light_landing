@@ -1,0 +1,92 @@
+@import "../../assets/styles/_variables";
+
+.video_wrapper {
+  max-width: 80%;
+  margin-left: 5px;
+  padding: 2px;
+  background: linear-gradient(0deg, $lavender-light 0%, $white 100%);
+  clip-path: polygon(92% 0%, 100% 30%, 100% 100%, 0% 98.05%, 0% 0%);
+
+  @media screen and (max-width: 768px) {
+    max-width: 90%;
+  }
+}
+
+.video {
+  clip-path: polygon(92% 0%, 100% 30%, 100% 100%, 0% 98.05%, 0% 0%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px 40px 18px 18px;
+  background-color: $lavender;
+
+  &_title {
+    max-width: 65%;
+    font-size: 2.8rem;
+    line-height: normal;
+    font-weight: 500;
+
+    @media screen and (max-width: 992px) {
+      font-size: 2.2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &_preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/images/video-preview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20%;
+    height: 130px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 50px;
+
+    @media screen and (max-width: 768px) {
+      width: 30%;
+      height: 120px;
+    }
+
+    @media screen and (max-width: 375px) {
+      height: 70px;
+    }
+  }
+
+  &_btn {
+    padding: 10px 15px 10px 20px;
+    background-color: $light;
+    border: none;
+    border-radius: 50%;
+    color: $white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $lavender-light;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 15px;
+      padding: 3px 6px 3px 9px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    padding: 15px 20px;
+  }
+}

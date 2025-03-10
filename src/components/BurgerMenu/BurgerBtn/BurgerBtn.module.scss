@@ -1,0 +1,24 @@
+@import "../../../assets/styles/variables";
+
+.burger_btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 50;
+
+  & span {
+    height: 3px;
+    width: 30px;
+    background-color: $white;
+    transition: all 0.2s ease;
+  }
+
+  &.open {
+    display: none;
+  }
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+}

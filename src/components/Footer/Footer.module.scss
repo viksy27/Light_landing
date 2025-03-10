@@ -1,0 +1,59 @@
+@import "../../assets/styles/variables";
+
+.footer {
+  color: $white;
+  padding: 20px 0;
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 480px) {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &_logo {
+    font-family: "IM Fell Great Primer SC", serif;
+    font-size: 2.4rem;
+    color: $white;
+  }
+
+  &_nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  &_link {
+    color: $white;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:focus {
+      background: linear-gradient(
+        90deg,
+        rgba(200, 36, 236, 1) 0%,
+        rgba(223, 48, 141, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:focus::before {
+      opacity: 1;
+    }
+  }
+
+  &_info {
+    text-align: center;
+    font-size: 1rem;
+    color: $light;
+
+    @media screen and (max-width: 480px) {
+      order: 1;
+      margin: 0 auto;
+    }
+  }
+}

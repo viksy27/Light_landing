@@ -1,0 +1,53 @@
+@import "../../../assets/styles/variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 330px;
+  min-height: 242px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: left;
+  border: 1px solid rgba(174, 0, 255, 0.055);
+  border-bottom-color: rgba(174, 0, 255, 0.01);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(203, 143, 232, 1) 400%
+  );
+
+  &_stars {
+    margin-bottom: 15px;
+  }
+
+  &_testimonial {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+
+  &_userdata {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &_photo {
+    width: 56px;
+  }
+
+  &_name {
+    font-size: 1rem;
+  }
+
+  &_username {
+    font-size: 1rem;
+    color: $pink;
+  }
+
+  @media screen and (max-width: 992px) {
+    min-height: 264px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,149 @@
+@import "../../assets/styles/_variables.scss";
+
+.explore {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  padding-left: 40px;
+  border-radius: 20px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(170, 20, 240, 1) 400%
+  );
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 500px;
+    height: 500px;
+    background: $bg-radial-gradient;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    left: 100px;
+    bottom: -150px;
+  }
+
+  &_content {
+    width: 50%;
+    padding: 50px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 420px) {
+      width: 100%;
+    }
+  }
+
+  &_title {
+    margin-bottom: 30px;
+  }
+
+  &_arrow {
+    height: 25px;
+    margin-left: 10px;
+  }
+
+  &_desc {
+    margin-bottom: 30px;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    @media screen and (max-width: 992px) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &_input_wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 420px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &_input {
+    max-width: 350px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    color: $white;
+    outline: none;
+    border: none;
+    background: linear-gradient(
+      180deg,
+      rgba(170, 20, 240, 0.3) 0%,
+      rgba(203, 143, 232, 0.18) 33%,
+      rgba(151, 60, 68, 0.05) 100%,
+      rgba(199, 137, 228, 0) 100%
+    );
+    box-shadow: inset 0px 0px 1px 1px rgba(170, 20, 240, 0.15),
+      0px 0px 1px 1px rgba(185, 54, 245, 0.25);
+
+    &::placeholder {
+      font-family: "Inter", sans-serif;
+      color: $lightPink;
+      opacity: 0.5;
+    }
+  }
+
+  &_arrow_btn {
+    height: 12px;
+  }
+
+  &_img_wrapper {
+    flex: 1 1 auto;
+
+    @media screen and (max-width: 576px) {
+      max-width: 350px;
+      margin: 40px auto 0;
+    }
+  }
+
+  &_img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    background-image: url(../../assets/images/hands.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,15 @@
+$bg-color: #010208;
+$white: #fff;
+$light: #c4c4c4;
+$lightPink: #e0a3c9;
+$pink: #eb4468;
+$lavender-light: #aa14f0;
+$lavender: #534686;
+$bg-radial-gradient: radial-gradient(
+  circle at 50% 50%,
+  $lavender-light 0%,
+  $bg-color 70%,
+  $bg-color 100%
+);
+
+$main-text: 1.3rem;
