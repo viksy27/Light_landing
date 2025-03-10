@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Light_landing/static/css/main.1af61c76.css",
+    "main.js": "/Light_landing/static/js/main.89b1d158.js",
+    "static/media/cvr1.png": "/Light_landing/static/media/cvr1.b6b9f2e3d72383588b65.png",
+    "static/media/cvr2.png": "/Light_landing/static/media/cvr2.4bbc2296165f8670cfce.png",
+    "static/media/cvr3.png": "/Light_landing/static/media/cvr3.a194ea10a5e90fd5368b.png",
+    "static/media/hands.png": "/Light_landing/static/media/hands.1aad286ae0dfba7ba731.png",
+    "static/media/video-preview.png": "/Light_landing/static/media/video-preview.b18f58d610e9dd5ececf.png",
+    "static/media/valuesCheck.svg": "/Light_landing/static/media/valuesCheck.630367370eb1d561cf18f932aa127343.svg",
+    "static/media/valuesPeaceSign.svg": "/Light_landing/static/media/valuesPeaceSign.659abd5a5a5a52ffea264565db5313ef.svg",
+    "static/media/valuesIdea.svg": "/Light_landing/static/media/valuesIdea.4c33c0083babeb8c1d11f80500c1e64b.svg",
+    "static/media/valuesHandshake.svg": "/Light_landing/static/media/valuesHandshake.d60e28be03e36ec69019f1439454d1dc.svg",
+    "static/media/stars.svg": "/Light_landing/static/media/stars.43fcf64d734e058e3ebe1195b8d002d8.svg",
+    "static/media/hearts.svg": "/Light_landing/static/media/hearts.bccbfee7eca62096f44ed5d2da16b1bf.svg",
+    "index.html": "/Light_landing/index.html",
+    "static/media/exploreArrow.svg": "/Light_landing/static/media/exploreArrow.93574ebc60866c39bd5127246cf9260a.svg",
+    "static/media/exploreBtnArrow.svg": "/Light_landing/static/media/exploreBtnArrow.0d081bdfcc5401ad681e36bc29915518.svg",
+    "static/media/grayStar.svg": "/Light_landing/static/media/grayStar.e4116689f9b83044fc6dca23aa941c54.svg",
+    "static/media/yellowStar.svg": "/Light_landing/static/media/yellowStar.718943d3430de2e02687948b0e90987d.svg",
+    "main.1af61c76.css.map": "/Light_landing/static/css/main.1af61c76.css.map",
+    "main.89b1d158.js.map": "/Light_landing/static/js/main.89b1d158.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1af61c76.css",
+    "static/js/main.89b1d158.js"
+  ]
+}
