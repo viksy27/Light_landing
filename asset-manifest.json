@@ -1,12 +1,19 @@
 {
   "files": {
-    "main.css": "/Light_landing/static/css/main.1af61c76.css",
-    "main.js": "/Light_landing/static/js/main.89b1d158.js",
+    "main.css": "/Light_landing/static/css/main.ace7e2dd.css",
+    "main.js": "/Light_landing/static/js/main.d49c8323.js",
     "static/media/cvr1.png": "/Light_landing/static/media/cvr1.b6b9f2e3d72383588b65.png",
-    "static/media/cvr2.png": "/Light_landing/static/media/cvr2.4bbc2296165f8670cfce.png",
-    "static/media/cvr3.png": "/Light_landing/static/media/cvr3.a194ea10a5e90fd5368b.png",
+    "static/media/cvr4.webp": "/Light_landing/static/media/cvr4.78e15de8d7226facfe1d.webp",
     "static/media/hands.png": "/Light_landing/static/media/hands.1aad286ae0dfba7ba731.png",
+    "static/media/cvr5.webp": "/Light_landing/static/media/cvr5.5db23aaa4220205d21d3.webp",
+    "static/media/cvr2.webp": "/Light_landing/static/media/cvr2.4bc6b9028e28544eb5c7.webp",
+    "static/media/cvr6.webp": "/Light_landing/static/media/cvr6.c2b53928e9ff9d4a8eae.webp",
+    "static/media/cvr3.webp": "/Light_landing/static/media/cvr3.2c7fdc46722691da7ff7.webp",
+    "static/media/cvr7.webp": "/Light_landing/static/media/cvr7.20159c358d56488198ec.webp",
+    "static/media/userImg3.jpg": "/Light_landing/static/media/userImg3.f2be5585abaf4ef67875.jpg",
+    "static/media/userImg1.jpg": "/Light_landing/static/media/userImg1.d8c193f6c8b0e3155d5f.jpg",
     "static/media/video-preview.png": "/Light_landing/static/media/video-preview.b18f58d610e9dd5ececf.png",
+    "static/media/userImg2.jpg": "/Light_landing/static/media/userImg2.0c1ce67320ed880a036e.jpg",
     "static/media/valuesCheck.svg": "/Light_landing/static/media/valuesCheck.630367370eb1d561cf18f932aa127343.svg",
     "static/media/valuesPeaceSign.svg": "/Light_landing/static/media/valuesPeaceSign.659abd5a5a5a52ffea264565db5313ef.svg",
     "static/media/valuesIdea.svg": "/Light_landing/static/media/valuesIdea.4c33c0083babeb8c1d11f80500c1e64b.svg",
@@ -18,11 +25,11 @@
     "static/media/exploreBtnArrow.svg": "/Light_landing/static/media/exploreBtnArrow.0d081bdfcc5401ad681e36bc29915518.svg",
     "static/media/grayStar.svg": "/Light_landing/static/media/grayStar.e4116689f9b83044fc6dca23aa941c54.svg",
     "static/media/yellowStar.svg": "/Light_landing/static/media/yellowStar.718943d3430de2e02687948b0e90987d.svg",
-    "main.1af61c76.css.map": "/Light_landing/static/css/main.1af61c76.css.map",
-    "main.89b1d158.js.map": "/Light_landing/static/js/main.89b1d158.js.map"
+    "main.ace7e2dd.css.map": "/Light_landing/static/css/main.ace7e2dd.css.map",
+    "main.d49c8323.js.map": "/Light_landing/static/js/main.d49c8323.js.map"
   },
   "entrypoints": [
-    "static/css/main.1af61c76.css",
-    "static/js/main.89b1d158.js"
+    "static/css/main.ace7e2dd.css",
+    "static/js/main.d49c8323.js"
   ]
 }
