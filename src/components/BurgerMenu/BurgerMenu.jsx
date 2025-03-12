@@ -21,10 +21,30 @@ const BurgerMenu = ({ isOpen, setIsOpen }) => {
       </span>
 
       <div ref={menuRef} className={s.menu}>
-        <a className={s.menu_link} onClick={() => setIsOpen(false)}>Home</a>
-        <a className={s.menu_link} onClick={() => setIsOpen(false)}>Company</a>
-        <a className={s.menu_link} onClick={() => setIsOpen(false)}>Features</a>
-        <a className={s.menu_link} onClick={() => setIsOpen(false)}>Sign Up</a>
+        <a
+          href="#home"
+          className={s.menu_link}
+          onClick={() => setIsOpen(false)}
+        >
+          Home
+        </a>
+        <a
+          href="#comrany"
+          className={s.menu_link}
+          onClick={() => setIsOpen(false)}
+        >
+          Company
+        </a>
+        <a
+          href="#headsets"
+          className={s.menu_link}
+          onClick={() => setIsOpen(false)}
+        >
+          Headsets
+        </a>
+        <a className={s.menu_link} onClick={() => setIsOpen(false)}>
+          Sign Up
+        </a>
       </div>
     </section>
   );

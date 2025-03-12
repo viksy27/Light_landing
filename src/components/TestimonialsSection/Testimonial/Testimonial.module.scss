@@ -16,6 +16,7 @@
     rgba(0, 0, 0, 1) 0%,
     rgba(203, 143, 232, 1) 400%
   );
+  user-select: none;
 
   &_stars {
     margin-bottom: 15px;
@@ -35,6 +36,7 @@
 
   &_photo {
     width: 56px;
+    border-radius: 50%;
   }
 
   &_name {

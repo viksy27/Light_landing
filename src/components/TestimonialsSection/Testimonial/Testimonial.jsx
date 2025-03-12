@@ -18,7 +18,7 @@ const Testimonial = ({ testimonial, img, name, username }) => {
       </div>
 
       <div className={s.card_userdata}>
-        <img className={s.card_photo} src={`./images/${img}.png`} alt={img} />
+        <img className={s.card_photo} src={img} width={64} alt={img} />
         <div>
           <p className={s.card_name}>{name}</p>
           <p className={s.card_username}>{username}</p>
