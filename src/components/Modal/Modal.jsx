@@ -5,6 +5,7 @@ const Modal = ({ isOpen, onClose, children }) => {
   const onWrapperClick = (e) => {
     if (e.target.classList.contains("Modal_modal_wrapper__4MyAv")) onClose();
   };
+  console.log("test");
 
   return (
     <>
