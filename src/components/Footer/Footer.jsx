@@ -9,14 +9,14 @@ const Footer = () => {
         <p className={s.footer_info}>© 2025 Light. All rights reserved.</p>
 
         <nav className={s.footer_nav}>
-          <a href="#" className={s.footer_link}>
+          <a href="#home" className={s.footer_link}>
             Home
           </a>
-          <a href="#" className={s.footer_link}>
-            Pricing
+          <a href="#comrany" className={s.footer_link}>
+            Company
           </a>
-          <a href="#" className={s.footer_link}>
-            Contact
+          <a href="#headsets" className={s.footer_link}>
+            Headsets
           </a>
         </nav>
       </div>

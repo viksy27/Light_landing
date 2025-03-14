@@ -99,7 +99,6 @@ const TestimonialsSection = () => {
         spaceBetween={50}
         slidesPerView={3}
         loop={true}
-        loopedSlides={testimonialsData.length}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,

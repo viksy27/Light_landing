@@ -1,10 +1,10 @@
 import s from "./BurgerBtn.module.scss";
 
-const BurgerBtn = ({ isOpen, setIsOpen }) => {
+const BurgerBtn = ({ isOpenBurger, setisOpenBurger }) => {
   return (
     <div
-      className={`${s.burger_btn} ${isOpen ? s.open : ""}`}
-      onClick={() => setIsOpen(!isOpen)}
+      className={`${s.burger_btn} ${isOpenBurger ? s.open : ""}`}
+      onClick={() => setisOpenBurger(!isOpenBurger)}
     >
       <span></span>
       <span></span>
