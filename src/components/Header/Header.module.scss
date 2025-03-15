@@ -73,3 +73,70 @@
 .header_btn {
   padding: 10px 24px;
 }
+
+.modal {
+  &_input_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+  }
+
+  &_input {
+    max-width: 350px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    color: $white;
+    outline: none;
+    border: none;
+    background: linear-gradient(
+      180deg,
+      rgba(170, 20, 240, 0.3) 0%,
+      rgba(203, 143, 232, 0.18) 33%,
+      rgba(151, 60, 68, 0.05) 100%,
+      rgba(199, 137, 228, 0) 100%
+    );
+    box-shadow: inset 0px 0px 1px 1px rgba(170, 20, 240, 0.15),
+      0px 0px 1px 1px rgba(185, 54, 245, 0.25);
+
+    &::placeholder {
+      font-family: "Inter", sans-serif;
+      color: $lightPink;
+      opacity: 0.5;
+    }
+  }
+}
+
+.usericon {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+
+  &_logout_btn {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $bg-color;
+    border: 1px solid $lavender;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $lavender;
+    }
+  }
+
+  &:hover &_logout_btn {
+    opacity: 1;
+  }
+}

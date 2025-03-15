@@ -3,7 +3,13 @@ import closeIcon from "../../assets/images/icons/close.svg";
 
 import s from "./BurgerMenu.module.scss";
 
-const BurgerMenu = ({ isOpenBurger, setisOpenBurger }) => {
+const BurgerMenu = ({
+  isOpenBurger,
+  setisOpenBurger,
+  handleBurgerLogin,
+  isAuth,
+  logout,
+}) => {
   const menuRef = useRef();
 
   const clickOutSide = (e) => {
@@ -43,9 +49,15 @@ const BurgerMenu = ({ isOpenBurger, setisOpenBurger }) => {
         >
           Headsets
         </a>
-        <a className={s.menu_link} onClick={() => setisOpenBurger(false)}>
-          Sign Up
-        </a>
+        {isAuth ? (
+          <a className={s.menu_link} onClick={logout}>
+            LogOut
+          </a>
+        ) : (
+          <a className={s.menu_link} onClick={handleBurgerLogin}>
+            Sign In
+          </a>
+        )}
       </div>
     </section>
   );
