@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import closeIcon from "../../assets/images/icons/close.svg";
 import s from "./Modal.module.scss";
 
 const Modal = ({ isOpen, onClose, children }) => {
@@ -21,12 +20,12 @@ const Modal = ({ isOpen, onClose, children }) => {
               transition={{ duration: 0.3 }}
               viewport={{ amount: 0.3 }}
             >
-              <img
-                src={closeIcon}
+              <span
                 className={s.modal_close_btn}
                 onClick={() => onClose(false)}
-                alt="Close icon"
-              />
+              >
+                ×
+              </span>
               {children}
             </motion.div>
           </div>

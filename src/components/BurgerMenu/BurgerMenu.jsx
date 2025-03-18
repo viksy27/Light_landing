@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import closeIcon from "../../assets/images/icons/close.svg";
 
 import s from "./BurgerMenu.module.scss";
 
@@ -24,7 +23,7 @@ const BurgerMenu = ({
       onClick={clickOutSide}
     >
       <span className={s.menu_close_btn} onClick={() => setisOpenBurger(false)}>
-        <img src={closeIcon} alt="Close icon" />
+        ×
       </span>
 
       <div ref={menuRef} className={s.menu}>

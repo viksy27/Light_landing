@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
 import BurgerBtn from "../BurgerMenu/BurgerBtn/BurgerBtn";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
@@ -11,9 +12,16 @@ import b from "../Button/Button.module.scss";
 const Header = () => {
   const [isOpenBurger, setisOpenBurger] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth") || false);
+
+  const {
+    register,
+    formState: { errors, isValid },
+    handleSubmit,
+    reset,
+  } = useForm({
+    mode: "onBlur",
+  });
 
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("isAuth"))) {
@@ -23,18 +31,14 @@ const Header = () => {
     }
   }, [localStorage.getItem("isAuth")]);
 
-  const login = (e) => {
-    e.preventDefault();
-
-    if (!username.length || !password.length) {
+  const login = (data) => {
+    if (!data.name || !data.password) {
       return;
     }
 
     localStorage.setItem("isAuth", true);
-
-    setUsername("");
-    setPassword("");
     setIsOpenModal(false);
+    reset();
   };
 
   const logout = () => {
@@ -44,8 +48,6 @@ const Header = () => {
 
   const handleCloseModal = () => {
     setIsOpenModal(false);
-    setUsername("");
-    setPassword("");
   };
 
   const handleBurgerLogin = () => {
@@ -99,24 +101,52 @@ const Header = () => {
         </header>
       </div>
       <Modal isOpen={isOpenModal} onClose={handleCloseModal}>
-        <form action="#" className={s.modal_input_wrapper} onSubmit={login}>
+        <form
+          action="#"
+          className={s.form_input_wrapper}
+          onSubmit={handleSubmit(login)}
+        >
           <h2>SignIn</h2>
-          <input
-            className={s.modal_input}
-            placeholder="Type UserName"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-          <input
-            className={s.modal_input}
-            placeholder="Type password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <Button>Login</Button>
+
+          <label>
+            UserName:
+            <input
+              {...register("name", {
+                required: "Enter your username",
+                minLength: {
+                  value: 4,
+                  message: "At least 4 characters",
+                },
+              })}
+              className={s.form_input}
+            />
+            {errors?.name && (
+              <p className={s.form_error}>
+                {errors?.name?.message || "Error!"}
+              </p>
+            )}
+          </label>
+
+          <label>
+            Password:
+            <input
+              {...register("password", {
+                required: "Enter your password",
+                minLength: {
+                  value: 6,
+                  message: "At least 6 characters",
+                },
+              })}
+              className={s.form_input}
+              type="password"
+            />
+            {errors?.password && (
+              <p className={s.form_error}>
+                {errors?.password?.message || "Error!"}
+              </p>
+            )}
+          </label>
+          <Button disabled={!isValid}>LogIn</Button>
         </form>
       </Modal>
     </>

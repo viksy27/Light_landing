@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 
 import Button from "../Button/Button";
@@ -8,6 +9,20 @@ import hands from "../../assets/images/hands.png";
 import s from "./ExploreSection.module.scss";
 
 const ExploreSection = () => {
+  const {
+    register,
+    formState: { errors, isValid },
+    handleSubmit,
+    reset,
+  } = useForm({
+    mode: "onBlur",
+  });
+
+  const submit = (data) => {
+    if (!data.email) return;
+    reset();
+  };
+
   return (
     <section className={`container + ${s.explore}`}>
       <motion.div
@@ -29,13 +44,33 @@ const ExploreSection = () => {
           your company.
         </p>
 
-        <div className={s.explore_input_wrapper}>
-          <input className={s.explore_input} placeholder="Your Email" />
+        <form
+          className={s.explore_form}
+          action="#"
+          onSubmit={handleSubmit(submit)}
+        >
+          <input
+            {...register("email", {
+              required: "Enter your email",
+              pattern: {
+                value: /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/,
+                message: "Invalid email address",
+              },
+            })}
+            className={s.explore_input}
+            type="email"
+            placeholder="Your Email"
+          />
+          {errors?.email && (
+            <p className={s.explore_form_error}>
+              {errors?.email?.message || "Error!"}
+            </p>
+          )}
 
-          <Button>
+          <Button disabled={!isValid}>
             Start <img src={arrowBtn} className={s.explore_arrow_btn} />
           </Button>
-        </div>
+        </form>
       </motion.div>
 
       <motion.div

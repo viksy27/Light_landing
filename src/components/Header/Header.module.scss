@@ -74,7 +74,7 @@
   padding: 10px 24px;
 }
 
-.modal {
+.form {
   &_input_wrapper {
     display: flex;
     flex-direction: column;
@@ -84,8 +84,10 @@
   }
 
   &_input {
+    position: relative;
     max-width: 350px;
     width: 100%;
+    margin-top: 5px;
     padding: 10px;
     border-radius: 5px;
     font-family: "Inter", sans-serif;
@@ -101,12 +103,26 @@
     );
     box-shadow: inset 0px 0px 1px 1px rgba(170, 20, 240, 0.15),
       0px 0px 1px 1px rgba(185, 54, 245, 0.25);
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
 
     &::placeholder {
       font-family: "Inter", sans-serif;
       color: $lightPink;
       opacity: 0.5;
     }
+
+    &:focus {
+      border: 1px solid $lavender;
+    }
+  }
+
+  &_error {
+    position: absolute;
+    padding-left: 10px;
+    color: $pink;
+    font-size: 0.8rem;
+    line-height: 1rem;
   }
 }
 
